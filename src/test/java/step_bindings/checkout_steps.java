@@ -22,10 +22,12 @@ public class checkout_steps {
     public static void setupClass() {
         //automatically download the appropriate driver if required:
         WebDriverManager.chromedriver().setup();
-        //WebDriverManager.firefoxdriver().setup();
-        //WebDriverManager.edgedriver().setup();
-        //WebDriverManager.iedriver().setup();
-        //WebDriverManager.chromiumdriver().setup();
+        /*
+        WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.edgedriver().setup();
+        WebDriverManager.iedriver().setup();
+        WebDriverManager.chromiumdriver().setup();
+        */
     }
 
     @Before
@@ -55,11 +57,10 @@ public class checkout_steps {
     }
 
     @Then("i can view the item in my basket")
-    public void i_can_view_the_item_in_my_basket() throws InterruptedException {
+    public void i_can_view_the_item_in_my_basket() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.findElement(By.linkText("Cart")).click();
         assertTrue(driver.findElement(By.linkText("Cap")).isDisplayed());
-        //Thread.sleep(2000);
         WebElement deleteCap;
         deleteCap = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a.remove")));
         deleteCap.click();

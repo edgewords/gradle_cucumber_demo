@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="basket" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-16T13:45:22" hostname="DESKTOP-7TC4PPT" time="18.744">
+<testsuite name="basket" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-16T18:39:12" hostname="DESKTOP-7TC4PPT" time="19.498">
   <properties/>
-  <testcase name="add to basket" classname="basket" time="18.744"/>
+  <testcase name="add to basket" classname="basket" time="19.498"/>
   <system-out><![CDATA[
 @run
 Scenario: add to basket                   ?[90m# src/test/resources/checkout.feature:5?[0m
@@ -12,17 +12,15 @@ Scenario: add to basket                   ?[90m# src/test/resources/checkout.fea
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 49116
+Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 26108
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1584366328.864][WARNING]: Timed out connecting to Chrome, retrying...
-Mar 16, 2020 1:45:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1584383958.912][WARNING]: Timed out connecting to Chrome, retrying...
+Mar 16, 2020 6:39:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1584366331.966][SEVERE]: Timed out receiving message from renderer: 0.100
-[1584366332.195][SEVERE]: Timed out receiving message from renderer: 0.100
-[1584366332.332][SEVERE]: Timed out receiving message from renderer: 0.100
-[1584366334.486][WARNING]: Timed out connecting to Chrome, retrying...
-[1584366339.123][SEVERE]: Timed out receiving message from renderer: 0.100
-[1584366340.701][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584383962.449][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584383962.942][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584383965.320][WARNING]: Timed out connecting to Chrome, retrying...
+[1584383969.962][SEVERE]: Timed out receiving message from renderer: 0.100
 ]]></system-err>
 </testsuite>
