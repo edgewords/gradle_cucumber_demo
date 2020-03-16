@@ -1,8 +1,12 @@
 package step_bindings;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.BeforeClass;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,10 +18,30 @@ import static org.junit.Assert.assertTrue;
 public class checkout_steps {
     WebDriver driver;
 
-    @Given("that i am on the shopping website")
-    public void that_i_am_on_the_shopping_website() {
+    @BeforeClass
+    public static void setupClass() {
+        //automatically download the appropriate driver if required:
+        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.firefoxdriver().setup();
+        //WebDriverManager.edgedriver().setup();
+        //WebDriverManager.iedriver().setup();
+        //WebDriverManager.chromiumdriver().setup();
+    }
+
+    @Before
+    public void setUp() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+    }
+
+    @After
+    public void tearDown() {
+        if (driver != null)
+            driver.quit();
+    }
+
+    @Given("that i am on the shopping website")
+    public void that_i_am_on_the_shopping_website() {
         driver.get("https://www.edgewordstraining.co.uk/demo-site/");
         driver.manage().window().maximize();
     }
@@ -42,7 +66,6 @@ public class checkout_steps {
         WebElement returnToShopLink;
         returnToShopLink= wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Return to shop")));
         returnToShopLink.click();
-        driver.quit();
     }
 
 }
