@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="basket" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-16T13:27:46" hostname="DESKTOP-7TC4PPT" time="18.856">
+  <properties/>
+  <testcase name="add to basket" classname="basket" time="18.856"/>
+  <system-out><![CDATA[
+@run
+Scenario: add to basket                   ?[90m# src/test/resources/checkout.feature:5?[0m
+  ?[32mGiven ?[0m?[32mthat i am on the shopping website?[0m ?[90m# step_bindings.checkout_steps.that_i_am_on_the_shopping_website()?[0m
+  ?[32mWhen ?[0m?[32mi add an item to the basket?[0m        ?[90m# step_bindings.checkout_steps.i_add_an_item_to_the_basket()?[0m
+  ?[32mThen ?[0m?[32mi can view the item in my basket?[0m   ?[90m# step_bindings.checkout_steps.i_can_view_the_item_in_my_basket()?[0m
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 4403
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1584365272.617][WARNING]: Timed out connecting to Chrome, retrying...
+Mar 16, 2020 1:27:54 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1584365275.569][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584365275.669][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584365275.854][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584365278.236][WARNING]: Timed out connecting to Chrome, retrying...
+[1584365283.038][SEVERE]: Timed out receiving message from renderer: 0.100
+[1584365284.718][SEVERE]: Timed out receiving message from renderer: 0.100
+]]></system-err>
+</testsuite>
