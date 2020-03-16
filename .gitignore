@@ -1,2 +1,5 @@
-/reports
-/build
+/reports/
+/build/
+/.gradle/
+/.idea/
+
