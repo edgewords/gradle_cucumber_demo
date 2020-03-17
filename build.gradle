@@ -18,9 +18,12 @@ dependencies {
     testCompile 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-4'
     testCompile 'org.seleniumhq.selenium:selenium-support:4.0.0-alpha-4'
     testCompile 'io.github.bonigarcia:webdrivermanager:3.8.1'
+    //added to stop warning about missing slf4j logger, as logging not required
+    testCompile 'org.slf4j:slf4j-nop:1.7.30'
 }
 
-test {
-    useJUnit() //This is the default, so not required. Also supports TestNG
-    include(['**/*test_runner.class']) //This is optional. Automatically looks for JUnit tests, or super classes using RunWith annotation
-}
+
+//test {
+//    useJUnit() //This is the default, so not required. Also supports TestNG
+//    include(['**/*test_runner.class']) //This is optional. Automatically looks for JUnit tests, or super classes using RunWith annotation
+//}
